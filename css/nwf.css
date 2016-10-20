@@ -48,4 +48,8 @@ hr:after {
     left: 50%;
     margin-left: 50px;
 }
-/* Separator line */
+/* end of Separator line */
+
+#products-container{
+	padding-top: 3em;
+}

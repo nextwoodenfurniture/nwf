@@ -15,7 +15,7 @@
 	<h2>Portfolio of designs</h2>
 </header>
 
-<div class="container-fluid" id="container-products">
+<div class="container-fluid" id="products-container">
 	
 	<!-- PRODUCT 1 -->
 	<div class="container">
@@ -38,6 +38,30 @@
 
 		<hr>
 	</div>
+
+
+	<div class="modal fade" tabindex="-1" role="dialog">
+		<div class="modal-dialog" role="document">
+		<div class="modal-content">
+		  <div class="modal-header">
+		    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		    <h4 class="modal-title">Chair + Table + Coffee table</h4>
+		  </div>
+		  <div class="modal-body">
+		  </div>
+		  
+		</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+
+		<script type="text/javascript">
+			$('.item img').click(function(event){
+				var img = $(event.target).attr('src');
+				$(".modal .modal-body").empty();
+				$(".modal .modal-body").append('<img class="img-responsive" src="'+img+'">');
+				$(".modal").modal('show');
+			});
+		</script>
 
 </div>
 
