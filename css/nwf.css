@@ -15,3 +15,7 @@ header h1{
 header h2{
 	color: white;
 }
+
+.item img{
+	cursor: pointer;
+}
