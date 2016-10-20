@@ -19,3 +19,33 @@ header h2{
 .item img{
 	cursor: pointer;
 }
+
+/* Separator line */
+hr { 
+    background: url('../images/nwf.jpg') no-repeat top center;
+    background-size: contain;
+    display: block;
+    height: 80px;
+    border: 0;
+    position: relative;
+}
+hr:before,
+hr:after {
+    content: '';
+    display: block;
+    position: absolute;
+    background: #d7d7d7;
+    height: 2px;
+    top: 40px;
+}
+hr:before {
+    left: 0;
+    right: 50%;
+    margin-right: 50px;
+}
+hr:after {
+    right: 0;
+    left: 50%;
+    margin-left: 50px;
+}
+/* Separator line */
