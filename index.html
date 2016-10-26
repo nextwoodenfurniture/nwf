@@ -7,6 +7,11 @@
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/nwf.css">
+
+	<script src="js/three.js"></script>
+	<script src="js/three/controls/TrackballControls.js"></script>
+	<script src="js/three/Detector.js"></script>
+	<script src="js/three/libs/stats.min.js"></script>
 </head>
 <body>
 
@@ -15,7 +20,186 @@
 	<h2>Portfolio of designs</h2>
 </header>
 
+<div class="container-fluid" id="products-container">
+	
+	<!-- PRODUCT 1 -->
+	<div class="container">
+		<h1>Bottle rack</h1>
+		<p>New way to store all the wine bottles and others. Shape can be modified with the panels.</p>
 
+		<div class="row item">
+			<div class="col-md-4 img-hover">
+				<img class="img-responsive" src="images/bottle_rack/1.jpg">
+			</div>
+
+			<div class="col-md-4 img-hover">
+				<img class="img-responsive" src="images/bottle_rack/2.jpg">
+			</div>
+
+		</div>
+
+		<hr>
+	</div>
+
+	<!-- PRODUCT 2 -->
+	<div class="container">
+		<h1>Multifunctional chair</h1>
+		<p>These cool multifunctional chairs can be stored in the wall, making with them a piece of art.</p>
+
+		<div class="row item">
+			<div class="col-md-4 img-hover">
+				<img class="img-responsive" src="images/multifunctional_chair/1.png">
+			</div>
+
+			<div class="col-md-4 img-hover">
+				<img class="img-responsive" src="images/multifunctional_chair/2.png">
+			</div>
+
+			<div class="col-md-4 img-hover">
+				<img class="img-responsive" src="images/multifunctional_chair/3d.jpg" data-type="3d">
+			</div>
+		</div>
+
+		<hr>
+	</div>
+
+	<!-- MODAL LOGIC -->
+	<div class="modal fade" tabindex="-1" role="dialog">
+		<div class="modal-dialog" role="document">
+		<div class="modal-content">
+		  <div class="modal-header">
+		    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		    <h4 class="modal-title">Item</h4>
+		  </div>
+		  <div class="modal-body" id="container">
+		  </div>
+		  
+		</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+
+		<script type="text/javascript">
+			$('.item img').click(function(event){
+				var img = $(event.target).attr('src');
+				var type = $(event.target).data('type');
+				var item = $(event.target).parent().parent().parent().find('h1').text();
+				
+				$(".modal .modal-title").text(item);
+				$(".modal .modal-body").empty();
+
+				if(type == '3d'){
+					$(".modal").modal('show');
+					startModel();
+				}else{	
+					$(".modal .modal-body").append('<img class="img-responsive" src="'+img+'">');
+					$(".modal").modal('show');
+				}
+			});
+		</script>
+
+		<!-- 3D Object -->
+
+		<script>
+		function startModel(){
+			if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
+			var container, stats;
+			console.log(container);
+			var camera, controls, scene, renderer;
+			var cross;
+			init();
+			animate();
+			function init() {
+				camera = new THREE.PerspectiveCamera( 60, window.innerWidth / window.innerHeight, 1, 1000 );
+				camera.position.z = 300;
+				controls = new THREE.TrackballControls( camera );
+				controls.rotateSpeed = 10.0;
+				controls.zoomSpeed = 1.2;
+				controls.panSpeed = 0.8;
+				controls.noZoom = true;
+				controls.noPan = true;
+				controls.staticMoving = true;
+				controls.dynamicDampingFactor = 0.3;
+				controls.keys = [ 65, 83, 68 ];
+				controls.addEventListener( 'change', render );
+				// world
+				scene = new THREE.Scene();
+
+				/////////////////////
+				var texture = new THREE.TextureLoader().load('textures/wood1.jpg');
+        		var material = new THREE.MeshLambertMaterial({map: texture});
+
+				var sphere = new THREE.Mesh( new THREE.BoxGeometry(100,10,100), material);
+				//var sphere2 = new THREE.Mesh( new THREE.BoxGeometry(100,10,100),new THREE.MeshLambertMaterial( { color: 0x2D303D, wireframe: true, shading: THREE.FlatShading } ));
+				var sphere2 = new THREE.Mesh( new THREE.BoxGeometry(100,10,100),new THREE.MeshLambertMaterial({map: texture}));
+				sphere2.position.y = -90;
+
+				var sphere3 = new THREE.Mesh( new THREE.BoxGeometry(100,100,10),new THREE.MeshLambertMaterial({map: texture}));
+				sphere3.position.y = -45;
+				sphere3.position.z = 45;
+
+				var sphere4 = new THREE.Mesh( new THREE.BoxGeometry(100,100,10),new THREE.MeshLambertMaterial({map: texture}));
+				sphere4.position.y = 45;
+				sphere4.position.z = -45;
+                scene.add(sphere);
+                scene.add(sphere2);
+                scene.add(sphere3);
+                scene.add(sphere4);
+
+				// lights
+				light = new THREE.DirectionalLight( 0xffffff );
+				light.position.set( 1, 1, 1 );
+				scene.add( light );
+				light = new THREE.DirectionalLight( 0x002288 );
+				light.position.set( -1, -1, -1 );
+				scene.add( light );
+				light = new THREE.AmbientLight( 0x222222 );
+				scene.add( light );
+				// renderer
+				renderer = new THREE.WebGLRenderer( { antialias: false } );
+				renderer.setClearColor(0xf0f0f0);
+				renderer.setPixelRatio( window.devicePixelRatio );
+				renderer.setSize( window.innerWidth, window.innerHeight );
+				container = document.getElementById( 'container' );
+
+				container.appendChild( renderer.domElement );
+				stats = new Stats();
+				container.appendChild( stats.dom );
+				//
+				window.addEventListener( 'resize', onWindowResize, false );
+				//
+				render();
+			}
+			function onWindowResize() {
+				camera.aspect = window.innerWidth / window.innerHeight;
+				camera.updateProjectionMatrix();
+				renderer.setSize( window.innerWidth, window.innerHeight );
+				controls.handleResize();
+				render();
+			}
+			function animate() {
+				setTimeout( function() {
+
+        			requestAnimationFrame( animate );
+
+    			}, 1000 / 30 );
+				//requestAnimationFrame( animate );
+				controls.update();
+			}
+			function render() {
+				setTimeout( function() {
+
+			        requestAnimationFrame( render );
+
+    			}, 1000 / 30 );
+				//requestAnimationFrame(render);
+				renderer.render( scene, camera );
+				stats.update();
+				$('canvas').css('width', '100%');
+				$('canvas').css('height', '100%');
+			}
+		}
+		</script>
+</div>
 
 </body>
 </html>
