@@ -1,15 +1,19 @@
+body{
+}
+
 header{
 	background-image: url(../images/background.jpg);
 	background-position: center;
 	background-size: cover;
 	width: 100%;
-	height: 400px;
+	height: 500px;
 	text-align: center;
 }
 
 header h1{
 	color: white;
 	padding-top: 10%;
+	font-size: 5em;
 }
 
 header h2{
@@ -52,4 +56,23 @@ hr:after {
 
 #products-container{
 	padding-top: 3em;
+}
+
+
+
+.img-hover img {
+    -webkit-transition: all .3s ease; /* Safari and Chrome */
+  	-moz-transition: all .3s ease; /* Firefox */
+  	-o-transition: all .3s ease; /* IE 9 */
+  	-ms-transition: all .3s ease; /* Opera */
+  	transition: all .3s ease;
+}
+.img-hover img:hover {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform:translateZ(0) scale(1.10); /* Safari and Chrome */
+    -moz-transform:scale(1.10); /* Firefox */
+    -ms-transform:scale(1.10); /* IE 9 */
+    -o-transform:translatZ(0) scale(1.10); /* Opera */
+    transform:translatZ(0) scale(1.10);
 }
