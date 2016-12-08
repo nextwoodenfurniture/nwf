@@ -3,19 +3,21 @@
 <head>
 	<title>NWFP - CDC</title>
 
-	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
-	<script type="text/javascript" src="js/bootstrap.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="css/nwf.css">
+	<script type="text/javascript" src="../js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/nwf.css">
 </head>
 <body>
 
 	<style type="text/css">
-		#logo{
-			position: absolute;
-			z-index: 10;
-			right: 0;
-			bottom: 0;
+		#product_header{
+			vertical-align: middle;
+		}
+
+		h2{
+			display: inline;
+			vertical-align: middle;
 		}
 
 		#container{
@@ -38,14 +40,19 @@
 		}
 	</style>
 
+	<div id="product_header">
+		<!-- Logo -->
+		<img id="logo" src="../images/logo.png" width="50">
+		<h2>CDC</h2>
+	</div>
+
 	<!-- 3D Model -->
 	<div id="container">
 		<div class="sketchfab-embed-wrapper"><iframe width="640" height="480" src="https://sketchfab.com/models/42c7cde6f63c4325bcbfdf38ca2bff67/embed" frameborder="0" allowvr allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></iframe>
 		</div>
 	</div>
 
-	<!-- Logo -->
-	<img id="logo" src="images/dark_logo.png" width="200">
+
 
 </body>
 </html>
