@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>NWFP - CDC</title>
+
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/nwf.css">
+</head>
+<body>
+
+	<style type="text/css">
+		#logo{
+			position: absolute;
+			z-index: 10;
+			right: 0;
+			bottom: 0;
+		}
+
+		#container{
+			position: relative;
+			width: 100%;
+			height: 600px;
+			overflow: hidden;
+			background-color: blue;
+		}
+
+		iframe{
+			position: absolute;
+			margin: auto;
+			top: -9999px;
+			left: 0px;
+			bottom: -9999px;
+			height: 120%;
+			width: 100%;
+
+		}
+	</style>
+
+	<!-- 3D Model -->
+	<div id="container">
+		<div class="sketchfab-embed-wrapper"><iframe width="640" height="480" src="https://sketchfab.com/models/42c7cde6f63c4325bcbfdf38ca2bff67/embed" frameborder="0" allowvr allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></iframe>
+		</div>
+	</div>
+
+	<!-- Logo -->
+	<img id="logo" src="images/dark_logo.png" width="200">
+
+</body>
+</html>
