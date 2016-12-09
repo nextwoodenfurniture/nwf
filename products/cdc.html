@@ -23,8 +23,21 @@
 		#container{
 			position: relative;
 			width: 100%;
-			height: 600px;
+			height: 500px;
 			overflow: hidden;
+		}
+
+		#container .row{
+			text-align: center;
+			width: 100%;
+			position: absolute;
+			bottom: 0;
+			background-color: grey;
+			margin-left: 0px;
+		}
+
+		#container .row div{
+			padding: 0;
 		}
 
 		iframe{
@@ -35,6 +48,14 @@
 			bottom: -9999px;
 			height: 120%;
 			width: 100%;
+		}
+
+		.product-title{
+			display: inline-block;
+			background-color: #c7271c;
+			padding: 1.5em 1em 0.2em 1em;
+			color: white;
+			margin-top: 0;
 
 		}
 	</style>
@@ -49,9 +70,33 @@
 	<div id="container">
 		<div class="sketchfab-embed-wrapper"><iframe width="640" height="480" src="https://sketchfab.com/models/42c7cde6f63c4325bcbfdf38ca2bff67/embed" frameborder="0" allowvr allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></iframe>
 		</div>
+
+	<div class="row">
+			<div class="col-md-4">
+				<a href="#" class="btn btn-default">First design</a>
+			</div>
+			<div class="col-md-4">
+				<a href="#" class="btn btn-default">Second design</a>
+			</div>
+			<div class="col-md-4">
+				<a href="#" class="btn btn-default">Final design</a>
+			</div>
+		</div>
 	</div>
 
-
+	<div class="container-fluid">
+		<h1 class="product-title">CDC</h1>
+		<p>To save space people buy and use multifunctional products. We decided to design a new multifunctional product for that aim. The piece can be divided into three different objects, all of which are needed to work in a comfortable space:
+		<br>
+		-CHAIR
+		<br>
+		-DESK
+		<br>
+		-SMALL TABLE (“coffee table”)
+		<br>
+		With these three objects, you can work anywhere comfortably whilst saving space in your working anviroment or at home for example. The entire piece can be used as storage space. CDC will be useful for students, professionals, designers, co-workers...
+		</p>
+	</div>
 
 </body>
 </html>
