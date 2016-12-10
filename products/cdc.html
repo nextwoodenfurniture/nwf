@@ -94,10 +94,13 @@
 		.product-container {
 		  position: relative;
 		  overflow: hidden;
-		  width: 200px;
+		  width: 180px;
 
 		}
 
+		.active-3d{
+			border: 3px solid #c7271c;
+		}
 		.product-container img {
 		  max-width: 101%;
 		  -moz-transition: all 0.3s;
@@ -164,9 +167,9 @@
 
 	</div>
 
-	<div class="container">
-	<h1 class="product-title" id="product-description">CDC</h1>
-	<div class="row">
+	<div class="container" id="product-desc">
+		<h1 class="product-title" id="product-description">CDC</h1>
+		<div class="row">
 
 		<div class="col-md-6">
 			<p>To save space people buy and use multifunctional products. We decided to design a new multifunctional product for that aim. The piece can be divided into three different objects, all of which are needed to work in a comfortable space:
@@ -183,17 +186,23 @@
 		<div class="col-md-6">
 			<h2>Alternative designs</h2>
 			<div class="row products" style="margin-top: 1em;">
-				<div class="col-md-6 col-xs-12">
-					<div class="product-container">
+				<div class="col-md-4 col-xs-12">
+					<div class="product-container" data-id=1>
 						<img src="../images/products/cdc1.PNG" class="img-responsive product">
 					</div>
 					<span>First design</span>
 				</div>
-				<div class="col-md-6 col-xs-12">
-					<div class="product-container">
+				<div class="col-md-4 col-xs-12">
+					<div class="product-container" data-id=2>
 						<img src="../images/products/cdc2.PNG" class="img-responsive product">
 					</div>
 					<span>Second design</span>
+				</div>
+				<div class="col-md-4 col-xs-12">
+					<div class="product-container active-3d" data-id=3>
+						<img src="../images/products/cdc3.PNG" class="img-responsive product">
+					</div>
+					<span>Third design</span>
 				</div>
 			</div>
 		</div>
@@ -203,5 +212,42 @@
 	<footer class="container-fluid">
 		<h5>Next Wooden Furniture | Demola 2016, Tampere - Finland | <a href="http://nextwoodenfurniture.wordpress.com">Blog</a></h5>
 	</footer>
+
+
+	<script type="text/javascript">
+	var cdc = [
+		{
+			"iframe":"https://sketchfab.com/models/189d88855a354ab090e99dbc34102945/embed",
+			"text":"First design of CDC",
+			"version":"First design"
+		},
+		{
+			"iframe":"https://sketchfab.com/models/ad823a4ceb1b4c4da7e2c47fb9c398b1/embed",
+			"text":"Second design of CDC",
+			"version":"Second design"
+		},
+		{
+			"iframe":"https://sketchfab.com/models/fb05b3b715cc485b8da6243c39804a18/embed",
+			"text":'To save space people buy and use multifunctional products. We decided to design a new multifunctional product for that aim. The piece can be divided into three different objects, all of which are needed to work in a comfortable space: Chair + Desk + Small table (“coffee table”). With these three objects, you can work anywhere comfortably whilst saving space in your working anviroment or at home for example. The entire piece can be used as storage space. CDC will be useful for students, professionals, designers, co-workers...',
+			"version":"Third design"
+		}
+	];
+
+
+		$('.product-container').click(function(event){
+			var target = $(event.target).parent()[0];
+			var id = $(target).data("id") - 1;
+			console.log(id);
+			var iframe = cdc[id].iframe;
+			var text = cdc[id].text;
+			var version = cdc[id].version;
+			var current_active = $('.active-3d');
+			$(current_active).removeClass('active-3d');
+			$(target).addClass('active-3d');
+			$('iframe').attr('src', iframe);
+			$('#product-desc p').text(text);
+		});
+
+	</script>
 </body>
 </html>
