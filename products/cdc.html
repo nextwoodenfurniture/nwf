@@ -17,16 +17,14 @@
     		src: url('../fonts/berlin.ttf'); /*URL to font*/
 		}
 
-		body{
-			font-family: 'Berlin';
-		}
+		
 		.navbar{
 			margin: 0;
 			border-radius: 0;
 			border-color: #222;
 		}
 
-		@media (min-width: @screen-sm-min){
+		@media screen and (min-width: 100px) and (max-width: 600px){
 			.navbar{
 				position: fixed;
 				top: 0;
@@ -34,12 +32,20 @@
 				width: 100%;
 			}
 
+			#container{
+				height: 350px;
+			}
 			.products{
 				text-align: center;
 			}
 			.products img{
 				margin: 0 auto;
 			}
+
+			.product-container{
+				margin: 0 auto;
+			}
+
 		}
 		#product_header{
 			vertical-align: middle;
@@ -154,7 +160,7 @@
 	</div>
 
 	<div class="container">
-	<h1 class="product-title" style="color: blue;">CDC</h1>
+	<h1 class="product-title">CDC</h1>
 	<div class="row">
 
 		<div class="col-md-6">
@@ -172,13 +178,13 @@
 		<div class="col-md-6">
 			<h2>Alternative designs</h2>
 			<div class="row products" style="margin-top: 1em;">
-				<div class="col-md-6 col-xs-6">
+				<div class="col-md-6 col-xs-12">
 					<div class="product-container">
 						<img src="../images/products/cdc1.PNG" class="img-responsive product">
 					</div>
 					<span>First design</span>
 				</div>
-				<div class="col-md-6 col-xs-6">
+				<div class="col-md-6 col-xs-12">
 					<div class="product-container">
 						<img src="../images/products/cdc2.PNG" class="img-responsive product">
 					</div>
