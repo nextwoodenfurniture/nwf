@@ -11,12 +11,21 @@
 <body>
 
 	<style type="text/css">
+		@font-face {
+    		font-family: 'Berlin'; /*a name to be used later*/
+    		src: url('../fonts/berlin.ttf'); /*URL to font*/
+		}
+
+		body{
+			font-family: 'Berlin';
+		}
 		.navbar{
 			margin: 0;
 			border-radius: 0;
+			border-color: #222;
 		}
 
-		@media screen and (max-width: 768px){
+		@media (min-width: @screen-sm-min){
 			.navbar{
 				position: fixed;
 				top: 0;
@@ -71,14 +80,12 @@
 			margin-top: 0;
 		}
 
-		/* CAROUSEL*/
-		.carousel-inner{
-			height: 600px;
-		}
-		.item{
+		.product{
+			width: 200px;
 			height: 100%;
+			min-width: 200px;
 		}
-		/*end of CAROUSEL*/
+
 
 		footer{
 			background-color: #c7271c;
@@ -104,20 +111,20 @@
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
+      <ul class="nav navbar-nav navbar-right">
         <li class="dropdown active">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Products <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">One more separated link</a></li>
+            <li><a href="#">CDC</a></li>
+            <li><a href="#">F&amp;S</a></li>
+            <li><a href="#">Hourglass Line</a></li>
+            <li><a href="#">Modularity</a></li>
+            <li><a href="#">STB</a></li>
           </ul>
         </li>
         <li class=""><a href="#">Team <span class="sr-only">(current)</span></a></li>
+        <li class=""><a href="#">Blog <span class="sr-only">(current)</span></a></li>
+
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
@@ -130,34 +137,34 @@
 
 	</div>
 
-	<div class="container-fluid">
+	<div class="container">
 	<h1 class="product-title">CDC</h1>
 	<div class="row">
 
 		<div class="col-md-6">
 			<p>To save space people buy and use multifunctional products. We decided to design a new multifunctional product for that aim. The piece can be divided into three different objects, all of which are needed to work in a comfortable space:
 			<br>
-			-CHAIR
+			-Chair
 			<br>
-			-DESK
+			-Desk
 			<br>
-			-SMALL TABLE (“coffee table”)
+			-Small table (“coffee table”)
 			<br>
 			With these three objects, you can work anywhere comfortably whilst saving space in your working anviroment or at home for example. The entire piece can be used as storage space. CDC will be useful for students, professionals, designers, co-workers...
 			</p>
 		</div>
 		<div class="col-md-6">
-				<div class="row">
-			<div class="col-md-4">
-				<a href="#" class="btn btn-default">First design</a>
+			<h2>Alternative designs</h2>
+			<div class="row" style="margin-top: 1em;">
+				<div class="col-md-6 col-xs-6">
+					<img src="../images/products/cdc1.png" class="img-responsive product">
+					<span>First design</span>
+				</div>
+				<div class="col-md-6 col-xs-6">
+					<img src="../images/products/cdc2.png" class="img-responsive product">
+					<span>Second design</span>
+				</div>
 			</div>
-			<div class="col-md-4">
-				<a href="#" class="btn btn-default">Second design</a>
-			</div>
-			<div class="col-md-4">
-				<a href="#" class="btn btn-default active">Final design</a>
-			</div>
-		</div>
 		</div>
 	</div>
 	</div>
