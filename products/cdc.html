@@ -237,7 +237,6 @@
 		$('.product-container').click(function(event){
 			var target = $(event.target).parent()[0];
 			var id = $(target).data("id") - 1;
-			console.log(id);
 			var iframe = cdc[id].iframe;
 			var text = cdc[id].text;
 			var version = cdc[id].version;
@@ -246,6 +245,9 @@
 			$(target).addClass('active-3d');
 			$('iframe').attr('src', iframe);
 			$('#product-desc p').text(text);
+
+			$("html, body").animate({ scrollTop: 0 }, "slow");
+  			return false;
 		});
 
 	</script>
