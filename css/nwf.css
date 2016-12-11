@@ -48,7 +48,13 @@ header h2{
 			border-color: #222;
 		}
 
+
 		@media screen and (min-width: 100px) and (max-width: 600px){
+			#background{
+				width: 100%;
+				height: 100%;
+			}
+
 			.navbar{
 				position: fixed;
 				top: 0;
@@ -66,7 +72,8 @@ header h2{
 				margin: 0 auto;
 			}
 
-			.product-container{
+			.products-list .product-container{
+				width: 100%;
 			}
 
 		}
