@@ -15,3 +15,112 @@ header h1{
 header h2{
 	color: white;
 }
+
+@font-face {
+    		font-family: 'Berlin'; /*a name to be used later*/
+    		src: url('../fonts/berlin.ttf'); /*URL to font*/
+		}
+
+		body{
+			font-family: "Berlin";
+		}
+		.navbar{
+			margin: 0;
+			border-radius: 0;
+			border-color: #222;
+		}
+
+		@media screen and (min-width: 100px) and (max-width: 600px){
+			.navbar{
+				position: fixed;
+				top: 0;
+				z-index: 10;
+				width: 100%;
+			}
+
+			#container{
+				height: 350px;
+			}
+			.products{
+				text-align: center;
+			}
+			.products img{
+				margin: 0 auto;
+			}
+
+			.product-container{
+				margin: 0 auto;
+			}
+
+		}
+
+		#product_header{
+			vertical-align: middle;
+		}
+
+		h2{
+			display: inline;
+			vertical-align: middle;
+		}
+
+		#container{
+			position: relative;
+			width: 100%;
+			height: 450px;
+			overflow: hidden;
+		}
+
+
+		iframe{
+			position: absolute;
+			margin: auto;
+			top: -9999px;
+			left: 0px;
+			bottom: -9999px;
+			height: 130%;
+			width: 100%;
+		}
+
+		.product-title{
+			display: inline-block;
+			background-color: #c7271c;
+			padding: 1.5em 1em 0.2em 1em;
+			color: white;
+			margin-top: 0;
+		}
+
+		.products img{
+			width: 210px;
+			height: 100%;
+			min-width: 200px;
+		}
+
+		.product-container {
+		  position: relative;
+		  overflow: hidden;
+		  width: 180px;
+
+		}
+
+		.active-3d{
+			border: 3px solid #c7271c;
+		}
+		.product-container img {
+		  max-width: 101%;
+		  -moz-transition: all 0.3s;
+		  -webkit-transition: all 0.3s;
+		  transition: all 0.3s;
+		}
+		.product-container:hover img {
+		  -moz-transform: scale(1.1);
+		  -webkit-transform: scale(1.1);
+		  transform: scale(1.1);
+		  cursor: pointer;
+		}
+		footer{
+			background-color: #c7271c;
+			text-align: center;
+			color: white;
+			padding: 1em 0;
+			margin: 2em 0 0 0;
+		}
