@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>NWFP - CDC</title>
+	<title>NWF - CDC</title>
 
 	<script type="text/javascript" src="../js/jquery-3.1.1.min.js"></script>
 	<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../js/data.js"></script>
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="../css/nwf.css">
 	<meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" />
@@ -103,31 +104,12 @@
 
 
 	<script type="text/javascript">
-	var cdc = [
-		{
-			"iframe":"https://sketchfab.com/models/189d88855a354ab090e99dbc34102945/embed",
-			"text":"First design of CDC",
-			"version":"First design"
-		},
-		{
-			"iframe":"https://sketchfab.com/models/ad823a4ceb1b4c4da7e2c47fb9c398b1/embed",
-			"text":"Second design of CDC",
-			"version":"Second design"
-		},
-		{
-			"iframe":"https://sketchfab.com/models/fb05b3b715cc485b8da6243c39804a18/embed",
-			"text":'To save space people buy and use multifunctional products. We decided to design a new multifunctional product for that aim. The piece can be divided into three different objects, all of which are needed to work in a comfortable space: Chair + Desk + Small table (“coffee table”). With these three objects, you can work anywhere comfortably whilst saving space in your working anviroment or at home for example. The entire piece can be used as storage space. CDC will be useful for students, professionals, designers, co-workers...',
-			"version":"Third design"
-		}
-	];
-
-
 		$('.product-container').click(function(event){
 			var target = $(event.target).parent()[0];
 			var id = $(target).data("id") - 1;
-			var iframe = cdc[id].iframe;
-			var text = cdc[id].text;
-			var version = cdc[id].version;
+			var iframe = data.cdc[id].iframe;
+			var text = data.cdc[id].text;
+			var version = data.cdc[id].version;
 			var current_active = $('.active-3d');
 			$(current_active).removeClass('active-3d');
 			$(target).addClass('active-3d');
