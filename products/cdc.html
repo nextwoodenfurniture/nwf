@@ -6,6 +6,7 @@
 	<script type="text/javascript" src="../js/jquery-3.1.1.min.js"></script>
 	<script type="text/javascript" src="../js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="../js/data.js"></script>
+	<script type="text/javascript" src="../js/products-controller.js"></script>
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="../css/nwf.css">
 	<meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" />
@@ -76,19 +77,19 @@
 			<h2>Alternative designs</h2>
 			<div class="row products" style="margin-top: 1em;">
 				<div class="col-md-4 col-xs-12">
-					<div class="product-container" data-id=1>
+					<div class="product-container" data-id=1 data-type="cdc">
 						<img src="../images/products/cdc1.PNG" class="img-responsive product">
 					</div>
 					<span>First design</span>
 				</div>
 				<div class="col-md-4 col-xs-12">
-					<div class="product-container" data-id=2>
+					<div class="product-container" data-id=2 data-type="cdc">
 						<img src="../images/products/cdc2.PNG" class="img-responsive product">
 					</div>
 					<span>Second design</span>
 				</div>
 				<div class="col-md-4 col-xs-12">
-					<div class="product-container active-3d" data-id=3>
+					<div class="product-container active-3d" data-id=3 data-type="cdc">
 						<img src="../images/products/cdc3.PNG" class="img-responsive product">
 					</div>
 					<span>Third design</span>
@@ -104,21 +105,7 @@
 
 
 	<script type="text/javascript">
-		$('.product-container').click(function(event){
-			var target = $(event.target).parent()[0];
-			var id = $(target).data("id") - 1;
-			var iframe = data.cdc[id].iframe;
-			var text = data.cdc[id].text;
-			var version = data.cdc[id].version;
-			var current_active = $('.active-3d');
-			$(current_active).removeClass('active-3d');
-			$(target).addClass('active-3d');
-			$('iframe').attr('src', iframe);
-			$('#product-desc p').text(text);
-
-			$("html, body").animate({ scrollTop: 0 }, "slow");
-  			return false;
-		});
+		
 
 	</script>
 </body>
