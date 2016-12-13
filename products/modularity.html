@@ -1,116 +1,103 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>NWFP - CDC</title>
+	<title>NWF - Modularity</title>
 
 	<script type="text/javascript" src="../js/jquery-3.1.1.min.js"></script>
 	<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../js/data.js"></script>
+	<script type="text/javascript" src="../js/products-controller.js"></script>
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="../css/nwf.css">
+	<meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" />
 </head>
 <body>
 
-	<style type="text/css">
-		#product_header{
-			vertical-align: middle;
-		}
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+		<a class="navbar-brand" href="../index.html" style="padding: 0;">
+        	<img alt="Brand" src="../images/logo.png" class="img-responsive" width="50" style="margin-left: 0.5em">
+      	</a>
+    </div>
 
-		h2{
-			display: inline;
-			vertical-align: middle;
-		}
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown active">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Products <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="cdc.html">CDC</a></li>
+            <li><a href="fs.html">F&amp;S</a></li>
+            <li><a href="hourglass.html">Hourglass Line</a></li>
+            <li><a href="modularity.html">Modularity</a></li>
+            <li><a href="stb.html">STB</a></li>
+          </ul>
+        </li>
+        <li class=""><a href="http://nextwoodenfurniture.wordpress.com">Blog <span class="sr-only">(current)</span></a></li>
 
-		#container{
-			position: relative;
-			width: 100%;
-			height: 500px;
-			overflow: hidden;
-		}
-
-		#container .row{
-			text-align: center;
-			width: 100%;
-			position: absolute;
-			bottom: 0;
-			background-color: grey;
-			margin-left: 0px;
-		}
-
-		#container .row div{
-			padding: 0;
-		}
-
-		iframe{
-			position: absolute;
-			margin: auto;
-			top: -9999px;
-			left: 0px;
-			bottom: -9999px;
-			height: 120%;
-			width: 100%;
-		}
-
-		.product-title{
-			display: inline-block;
-			background-color: #c7271c;
-			padding: 1.5em 1em 0.2em 1em;
-			color: white;
-			margin-top: 0;
-		}
-
-		/* CAROUSEL*/
-		.carousel-inner{
-			height: 600px;
-		}
-		.item{
-			height: 100%;
-		}
-		/*end of CAROUSEL*/
-
-		footer{
-			background-color: #c7271c;
-			text-align: center;
-			color: white;
-			padding: 1em 0;
-			margin: 2em 0 0 0;
-		}
-	</style>
-
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
 
 	<!-- 3D Model -->
-	<div id="container">
-		<div class="sketchfab-embed-wrapper"><iframe width="640" height="480" src="https://sketchfab.com/models/ac71094775494c0f85deffae481c5954/embed" frameborder="0" allowvr allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></iframe>
-	</div>
-	</div>
+
+	<div id="container" class="container-fluid">
+
+		<div class="sketchfab-embed-wrapper"><iframe width="640" height="480" src="https://sketchfab.com/models/4953e4e637574bd3bb623c3b903ab349/embed" frameborder="0" allowvr allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></iframe>
+		</div>
 
 	</div>
 
-	<div class="container-fluid">
-	<h1 class="product-title">Modularity</h1>
-	<div class="row">
+	<div class="container" id="product-desc">
+		<h1 class="product-title" id="product-description">Modularity</h1>
+		<div class="row">
 
 		<div class="col-md-6">
-			
-			</p>
+			<p>We designed a storage piece which can be used for spices, wine bottles, books and so on.<br>The product can be produced on a larger scale and can be attached to the wall for the use of bookshelves for example.<br>The modular pieces have standard measurements for the bottle, spice or books. With different sizes and combinations the user can create his/her own product. </p>
 		</div>
 		<div class="col-md-6">
-				<div class="row">
-			<div class="col-md-4">
-				<a href="#" class="btn btn-default">First design</a>
+			<h2>Alternative designs</h2>
+			<div class="row products" style="margin-top: 1em;">
+				<div class="col-md-4 col-xs-12">
+					<div class="product-container" data-id=1 data-type="modularity">
+						<img src="../images/products/modularity1.PNG" class="img-responsive product">
+					</div>
+					<span>Bottle rack design</span>
+				</div>
+				<div class="col-md-4 col-xs-12">
+					<div class="product-container" data-id=2 data-type="modularity">
+						<img src="../images/products/modularity2.PNG" class="img-responsive product">
+					</div>
+					<span>1st Bookshelf design</span>
+				</div>
+				<div class="col-md-4 col-xs-12">
+					<div class="product-container active-3d" data-id=3 data-type="modularity">
+						<img src="../images/products/modularity3.PNG" class="img-responsive product">
+					</div>
+					<span>2nd Bookslef design</span>
+				</div>
 			</div>
-			<div class="col-md-4">
-				<a href="#" class="btn btn-default">Second design</a>
-			</div>
-			<div class="col-md-4">
-				<a href="#" class="btn btn-default active">Final design</a>
-			</div>
-		</div>
 		</div>
 	</div>
 	</div>
 
-	<footer>
-		<h5>(C) Next Wooden Furniture | Demola 2016 | <a href="#">Blog</a></h5>
+	<footer class="container-fluid">
+		<h5>Next Wooden Furniture | Demola 2016, Tampere - Finland | <a href="http://nextwoodenfurniture.wordpress.com">Blog</a></h5>
 	</footer>
+
+
+	<script type="text/javascript">
+		
+
+	</script>
 </body>
 </html>
