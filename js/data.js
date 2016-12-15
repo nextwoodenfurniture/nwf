@@ -72,4 +72,16 @@ var data = {
 			"version":"Bookshelf 2 version"
 		},
 	],
+	"fs":[
+		{
+			"iframe":"https://sketchfab.com/models/2e4664650c314a65817d7d60f1857acf/embed",
+			"text":"The F &amp; S stands for Foldable and Stackable. Its origin is a former design for an art piece on the wall, that later became the Onepiece/Osa. We wanted to design one element, which can be divided into three pieces (table and two chairs) and is attached to a wall. Due to issues with stability we transformed the idea to the F &amp; S. It consists of a table, which is attached to a wall, and several chairs. The table can be folded up and the chairs can be stacked, so that we create more space and have the opportunity to store something in the stacked chairs. This design can fit into a lot of environments like restaurants, cafés, hotels and even space-saving homes.",
+			"version":"Chair version"
+		},
+		{
+			"iframe":"https://sketchfab.com/models/5b3312105e724381af56aed26825945b/embed",
+			"text":"The F &amp; S stands for Foldable and Stackable. Its origin is a former design for an art piece on the wall, that later became the Onepiece/Osa. We wanted to design one element, which can be divided into three pieces (table and two chairs) and is attached to a wall. Due to issues with stability we transformed the idea to the F &amp; S. It consists of a table, which is attached to a wall, and several chairs. The table can be folded up and the chairs can be stacked, so that we create more space and have the opportunity to store something in the stacked chairs. This design can fit into a lot of environments like restaurants, cafés, hotels and even space-saving homes.",
+			"version":"Table and stools version"
+		}
+	]
 };
