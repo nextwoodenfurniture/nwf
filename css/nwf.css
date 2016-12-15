@@ -77,6 +77,10 @@ header h2{
 				width: 100%;
 			}
 
+			.team{
+				padding-top: 3em;
+			}
+
 			.team .row{
 				margin: 0;
 	}
@@ -180,6 +184,9 @@ header h2{
 			margin: 2em 0 0 0;
 		}
 
+		.team{
+			margin-top: 2em;
+		}
 		.box{
 			background-color: #c7271c;
 			color: white;
